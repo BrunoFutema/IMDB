@@ -1,0 +1,356 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+html,
+body {
+  font: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button {
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+figure {
+  position: relative;
+}
+
+header.main-header {
+  height: 90vh;
+  width: 100%;
+
+  background: url('../img/capa-madmax2.jpg') no-repeat fixed;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header nav {
+  width: 100%;
+  max-width: 960px;
+
+  padding: 20px 0 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav ul {
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li {
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: 600;
+  list-style: none;
+  margin: 0 15px;
+  transition: 0.2s all ease-in-out;
+}
+
+header nav ul li:hover {
+  color: #e4bb23;
+  cursor: pointer;
+}
+
+header nav div.navbar-profile {
+  transition: 0.2s all ease-in-out;
+
+  display: flex;
+  align-items: center;
+}
+
+header nav div.navbar-profile:hover {
+  filter: brightness(90%);
+  cursor: pointer;
+}
+
+header nav div.navbar-profile img {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+}
+
+header nav div.navbar-profile span {
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+header section.banner {
+  height: 100vh;
+  width: 100%;
+  max-width: 960px;
+  margin: 120px 0 auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+header section.banner h1 {
+  color: #fff;
+  font-size: 4em;
+  font-weight: 600;
+  margin: 0;
+}
+
+header section.banner ol {
+  width: 300px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+
+  display: flex;
+}
+
+header section.banner ol li {
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: 200;
+  margin: 0 5px;
+  text-transform: uppercase;
+}
+
+header section.banner button {
+  height: 50px;
+  width: 200px;
+
+  background: #e4bb23;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header section.banner button:hover {
+  filter: brightness(90%);
+}
+
+header section.banner button i {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+header section.banner div.calendar {
+  margin-top: 80px;
+}
+
+header section.banner div.calendar span:first-child {
+  color: #fff;
+  display: block;
+  font-size: 1em;
+  font-weight: 300;
+  margin: 10px 0px;
+}
+
+header section.banner div.calendar span:last-child {
+  color: #e4bb23;
+}
+
+header div.hero {
+  width: 100%;
+  height: 90vh;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 212, 255, 0) 75%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav.navbar-bottom {
+  height: 60px;
+  max-width: 960px;
+  border-bottom: 1.2px solid rgb(202, 202, 202);
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav.navbar-bottom a {
+  color: #e4bb23;
+  border-bottom: 1.2px solid rgb(207, 207, 207);
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 15px;
+  padding: 21px 0px;
+  text-transform: uppercase;
+}
+
+nav.navbar-bottom a:hover {
+  border-bottom: 1.2px solid #e4bb23;
+}
+
+main.content {
+  max-width: 960px;
+  margin: 0px auto;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+main.content ul.cards {
+  width: 100%;
+  list-style: none;
+  margin: 30px 0 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+main.content li.card {
+  width: 225px;
+  border-radius: 4px;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
+  margin: 10px 0px;
+}
+
+main.content li.card:hover div.details {
+  opacity: 1;
+  visibility: visible;
+}
+
+main.content li.card figure {
+  width: 100%;
+  margin: 0;
+}
+
+main.content li.card figure img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+main.content li.card figure div.details {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s opacity ease-in-out;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main.content li.card figure div.details h1 {
+  color: #e4bb23;
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+main.content li.card figure div.details i {
+  color: #fff;
+  font-size: 50px;
+}
+
+main.content li.card figure div.details i:hover {
+  cursor: pointer;
+  color: #e4bb23;
+}
+
+main.content li.card div.info {
+  padding: 10px;
+}
+
+main.content li.card div.info h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin: 5px 0px
+}
+
+main.content li.card div.info p {
+  display: flex;
+  flex-direction: row;
+}
+
+main.content li.card div.info p a {
+  color: #e4bb23;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+main.content li.card div.info div.recommendations {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main.content li.card div.info div.recommendations i {
+  font-size: 20px;
+  color: #7f7f7f;
+  cursor: pointer;
+}
+
+main.content li.card div.info div.recommendations i:hover {
+  color: #e74c3c;
+}
+
+main.content li.card div.info div.recommendations span {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+footer {
+  margin: 0 auto;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer section {
+  width: 100%;
+  max-width: 960px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer section div.social-icons i {
+  font-size: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+  color: #bababa;
+}
+
+footer section div.social-icons i.twitter:hover {
+  color: #00acee;
+}
+
+footer section div.social-icons i.facebook:hover {
+  color: #3b5998;
+}
+
+footer section div.social-icons i.instagram:hover {
+  color: #FD1D1D;
+}
